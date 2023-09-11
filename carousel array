@@ -24,6 +24,98 @@
     </div>
 
 
-    <script src="carousel.js"></script>
+    <script> //   1.function
+//   2.events
+//   3.array, number
+//   4.if/else, for/while
+
+
+
+
+const IMAGES = ["1.jpg", "2.jpg", "3.jpg"]
+
+const Titles = ["Old Town",
+ "New City",
+  "Mountains of Alaska"]
+
+//start/current slide
+let currentIndex = 0
+
+const EFFECTS = [
+    "animate__bounceInLeft",
+    "animate__fadeInRight",
+    "animate__bounceInLeft",
+    "animate__bounceInRight",
+]
+
+function showImage( n ){
+
+    let i = Math.round(Math.random() * 3)
+
+carouselSlides.innerHTML = `<img src="${IMAGES[n]}"
+class="animate__animated ${EFFECTS[i]}"
+/>`
+}
+
+
+function showTitle( n ){
+
+carouselTitles.innerHTML = `<h4>${TITLES[n]}</h4>`
+}
+
+
+function showIndicators( n ){
+
+
+    carouselIndicators.innerHTML = ``
+   for(let i = 0; i<IMAGES.length; i++) {
+    if(i == n){
+        carouselIndicators.innerHTML += ` ⦿ `
+    } else{
+        carouselIndicators.innerHTML += ` - `
+    }
+    
+   }
+}
+
+
+function next(){
+    //HW2:
+    if(currentIndex >= 2){
+        IMAGES = 2
+    }
+    currentIndex++
+    showImage(currentIndex)
+    showIndicators(currentIndex)
+}
+
+function prev(){
+    if(currentIndex <= 0){
+        IMAGES = 0
+    }
+    currentIndex--
+    showImage(currentIndex)
+    showIndicators(currentIndex)
+}
+showImage(currentIndex)
+showTitle(currentIndex)
+showIndicators(currentIndex)
+
+
+
+
+
+
+function play(){
+    setInterval( next, 10000)
+}
+/*HOME WORK
+
+1)const este un cuvânt cheie folosit pentru a declara o variabilă care nu poate fi reasignată.
+1.1Scrierea cu litere mari ajuta la distingerea lor de alte variabile
+
+*/
+
+</script>
 </body>
 </htblue
