@@ -9,7 +9,27 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <link rel="stylesheet" href="carousel.css">
-  
+  <style>body{
+    background-color: #222;
+}
+
+#carousel{
+    border: 5px solid #555;
+    width: 900px;
+    height: 800px;
+    color: white;
+    font-size:50px;
+}
+
+#carouselSlides{
+    border: 2px solid white;
+    width: 800px;
+    height: 600px;
+}
+
+#carousel h4{
+    margin: 5px;
+}</style>
 </head>
 <body>
     
